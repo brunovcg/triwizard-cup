@@ -1,0 +1,77 @@
+:root{
+    --borderApp: linear-gradient(to right, #141e30, #243b55);
+
+}
+
+@font-face {
+    font-family: Harry;
+    src: url('../assets/HARRYP__.TTF');
+}
+
+
+.App {
+
+    background-image: url('../assets/Landscape.jpeg');
+    background-size:cover;
+    width: 1280px;
+    height: 720px;
+    margin-top: 20px;
+
+    border-radius: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+}
+
+.button {
+    border-radius: 10px;
+    font-family: Harry;
+    font-size: 30px;
+    width: 150px;
+    height: 50px ;
+    margin: 20px;
+    color: rgba(255, 240, 30, 0.726);
+    background-color: rgba(48, 49, 49, 0.787);
+    transition: 0.5s;
+}
+
+.button:hover {
+    border-radius: 10px;
+    font-family: Harry;
+    font-size: 30px;
+    width: 150px;
+    height: 50px ;
+    margin: 20px;
+    color: rgba(48, 49, 49, 0.787);
+    background-color: rgba(255, 240, 30, 0.726);
+}
+
+
+
+@media (max-width:450px){
+
+    .App {
+      margin-top: 10px;
+      background-image: url('../assets/Portrait.jpeg');
+      background-size: contain;
+      width: 350px;
+      height: 620px;
+
+    }
+  
+  
+  }
