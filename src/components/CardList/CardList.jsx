@@ -8,9 +8,18 @@ class CardList extends Component {
 
         return(
             <div className="cardListContainer">
-                <Card house={"Ravenclaw"}/>
-                <Card house={"Gryffindor"}/>
-                <Card house={"Hufflepuff"}/>
+
+
+                {this.props.chosen.map((x)=><Card 
+                    house={x.house} 
+                    image={x.image} 
+                    name={x.name} 
+                    gender={x.gender}
+                
+                />)}
+
+
+             
                
             </div>
         )
@@ -19,3 +28,4 @@ class CardList extends Component {
 }
 
 export default CardList
+

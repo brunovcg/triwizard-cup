@@ -19,18 +19,20 @@ class Card extends Component {
                         ><img src = {this.props.house === "Ravenclaw" ? Raven
                                     : this.props.house === "Slytherin" ? Slyth
                                     : this.props.house === "Gryffindor" ? Gryffin
-                                    : Huffle}
+                                    : Huffle
+                        }
                             alt="clan" 
                             className="cardHousePhoto"/>
+
                     </div> 
                 </div>
                     <div className="cardCharPhoto">
-                        <img src={Raven} 
+                        <img src={this.props.image} 
                             alt="character" 
                             className="cardPhoto"/>
                     </div>
-                     <div className="cardName"> Harry Potter</div>
-                     <div className="cardBirth">Birth: {1997}</div>                    
+                     <div className="cardName">{this.props.name}</div>
+                     <div className="cardBirth">Gender: {this.props.gender}</div>                    
 
 
             </div>
