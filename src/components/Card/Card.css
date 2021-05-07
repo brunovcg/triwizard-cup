@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 128, 128, 0.63);
+    background-color: rgba(0, 128, 128, 0.733);
     border-radius: 20px;
     border: 2px solid rgb(2, 68, 68);
     box-shadow: 7px 10px 15px -6px rgba(0,0,0,0.83);
@@ -78,7 +78,7 @@
     .cardHouseName{
         border-radius: 20px;
         color:white;
-        font-size: 14px;
+        font-size: 16px;
         font-family: Goblin;
         font-weight: bold;
         width: 65%;
@@ -133,6 +133,7 @@
         justify-content: center;
         align-items: flex-start;
         font-family: Goblin;
+        font-size: 20px;
         color: rgba(255, 255, 255, 0.747);
     }
 
@@ -144,7 +145,6 @@
 
     .cardHouse {
         width: 20%;
-        
     }
 
         .Ravenclaw, .Hufflepuff, .Slytherin, .Gryffindor {
@@ -182,7 +182,7 @@
         .cardBirth {
             width: 25%;
             align-items: center;
-            font-size: 10px;
+            font-size: 11px;
         }
     }
 

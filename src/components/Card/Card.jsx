@@ -15,11 +15,12 @@ class Card extends Component {
 
                 <div className="cardHouse">
                     <div className="cardHouseName">{this.props.house}</div>
-                    <div className="cardHousePhotoBox"
-                        ><img src = {this.props.house === "Ravenclaw" ? Raven
-                                    : this.props.house === "Slytherin" ? Slyth
-                                    : this.props.house === "Gryffindor" ? Gryffin
-                                    : Huffle
+                    <div className="cardHousePhotoBox">
+                        <img src = {
+                            this.props.house === "Ravenclaw" ? Raven
+                            : this.props.house === "Slytherin" ? Slyth
+                            : this.props.house === "Gryffindor" ? Gryffin
+                            : Huffle
                         }
                             alt="clan" 
                             className="cardHousePhoto"/>
@@ -32,8 +33,7 @@ class Card extends Component {
                             className="cardPhoto"/>
                     </div>
                      <div className="cardName">{this.props.name}</div>
-                     <div className="cardBirth">Gender: {this.props.gender}</div>                    
-
+                     <div className="cardBirth">{this.props.gender}</div>                    
 
             </div>
         )
