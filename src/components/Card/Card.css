@@ -139,6 +139,10 @@
 
 @media (max-width:450px){
 
+    .App {
+        width: 80vw;
+    }
+
     .Ravenclaw, .Hufflepuff, .Slytherin, .Gryffindor {
         flex-direction: row ;
         width: 100%;
@@ -171,15 +175,15 @@
     }
 
     .cardName{
-        width: 30%;
-        font-size: 30px;
+        width: 35%;
+        font-size: 25px;
         text-align: center;
     }
 
     .cardBirth {
-        width: 15%;
+        width: 25%;
         align-items: center;
-        font-size: 12px;
+        font-size: 10px;
     }
 
 }
