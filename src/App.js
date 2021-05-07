@@ -4,6 +4,7 @@ import CardList from './components/CardList/CardList';
 import { Component } from 'react';
 
 
+
 class App extends Component {
 
   state ={
@@ -19,15 +20,19 @@ class App extends Component {
     .then((response)=> this.setState({students: [...students,response], loading: false}))    
   }
 
+  shuffle =()=>{
+    const {students} = this.state
+    return Math.ceil(Math.random() * students[0].length-1)}
+
   chooseStudents = () => {
 
     const {students} = this.state
 
-    let chosen1 = Math.ceil(Math.random() * students[0].length-1);
+    let chosen1 = this.shuffle();
 
-    let chosen2 = Math.ceil(Math.random() * students[0].length-1);
+    let chosen2 = this.shuffle();
     
-    let chosen3 = Math.ceil(Math.random() * students[0].length-1);
+    let chosen3 = this.shuffle();
 
     if (students[0][chosen1].house !== students[0][chosen2].house && 
       students[0][chosen2].house !== students[0][chosen3].house && 
