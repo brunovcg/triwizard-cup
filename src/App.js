@@ -10,16 +10,7 @@ class App extends Component {
        students: [],
        chosenStudents: [],
        chosenHouses: [],
-       loading: true,
   }
-
-  testeConsole(){
-    console.log(this.state.students)
-
-   
-  }
-
-
 
   componentDidMount(){
     const {students} = this.state
@@ -27,9 +18,6 @@ class App extends Component {
     .then(response=> response.json())
     .then((response)=> this.setState({students: [...students,response], loading: false}))    
   }
-
- 
-
 
   chooseStudents = () => {
 
@@ -43,17 +31,23 @@ class App extends Component {
 
     if (students[0][chosen1].house !== students[0][chosen2].house && 
       students[0][chosen2].house !== students[0][chosen3].house && 
-      students[0][chosen1].house !== students[0][chosen3].house) { 
-        
+      students[0][chosen1].house !== students[0][chosen3].house) 
+      
+      {  
         this.setState(
-        {chosenStudents : [students[0][chosen1],students[0][chosen2],students[0][chosen3]],
-        chosenHouses : [students[0][chosen1].house,students[0][chosen2].house,students[0][chosen3].house]})} 
+          {chosenStudents : [
+            students[0][chosen1],
+            students[0][chosen2],
+            students[0][chosen3]],
+          chosenHouses : [
+            students[0][chosen1].house,
+            students[0][chosen2].house,
+            students[0][chosen3].house]}
+        )
+      } 
 
     else {this.chooseStudents()}
-        
   }
-
- 
 
   render(){
 
@@ -68,9 +62,7 @@ class App extends Component {
 
         <main>
           <button onClick={() => {this.chooseStudents()}} className="button">SHUFFLE</button>
-          <CardList 
-            chosen={chosenStudents}
-          />
+          <CardList chosen={chosenStudents}/>
         </main>
         
       </div>
