@@ -14,7 +14,7 @@ class App extends Component {
 
   componentDidMount(){
     const {students} = this.state
-    fetch("http://hp-api.herokuapp.com/api/characters/students")
+    fetch("https://hp-api.herokuapp.com/api/characters/students")
     .then(response=> response.json())
     .then((response)=> this.setState({students: [...students,response], loading: false}))    
   }
