@@ -17,7 +17,7 @@ class App extends Component {
     const {students} = this.state
     fetch("https://hp-api.herokuapp.com/api/characters/students")
     .then(response=> response.json())
-    .then((response)=> this.setState({students: [...students,response], loading: false}))    
+    .then((response)=> this.setState({students: [...students,response]}))    
   }
 
   shuffle =()=>{
