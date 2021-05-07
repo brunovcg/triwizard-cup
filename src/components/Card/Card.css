@@ -65,7 +65,6 @@
     box-shadow: 7px 10px 15px -6px rgba(0,0,0,0.83);
 }
 
-
 .cardHouse {
     display: flex;
     justify-content: center;
@@ -99,9 +98,7 @@
 }
 
 .cardHousePhoto {
-    width: 50px;
-    
-
+    width: 50px;  
 }
 
 .cardCharPhoto {
@@ -139,8 +136,6 @@
     font-family: Goblin;
     color: rgba(255, 255, 255, 0.747);
 }
-
-
 
 @media (max-width:450px){
 

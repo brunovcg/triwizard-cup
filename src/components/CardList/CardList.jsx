@@ -8,23 +8,17 @@ class CardList extends Component {
 
         return(
             <div className="cardListContainer">
-
-
                 {this.props.chosen.map((x)=><Card 
                     house={x.house} 
                     image={x.image} 
                     name={x.name} 
                     gender={x.gender}
-                
+                    key={x.image+x.name}
                 />)}
-
-
-             
                
             </div>
         )
     }
-
 }
 
 export default CardList

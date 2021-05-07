@@ -9,12 +9,17 @@ class App extends Component {
   state ={
        students: [],
        chosenStudents: [],
+       chosenHouses: [],
        loading: true,
   }
 
   testeConsole(){
     console.log(this.state.students)
+
+   
   }
+
+
 
   componentDidMount(){
     const {students} = this.state
@@ -23,26 +28,32 @@ class App extends Component {
     .then((response)=> this.setState({students: [...students,response], loading: false}))    
   }
 
+ 
+
 
   chooseStudents = () => {
+
     const {students} = this.state
 
-    const chosen1 = Math.ceil(Math.random() * students[0].length-1);
+    let chosen1 = Math.ceil(Math.random() * students[0].length-1);
 
-
-    const chosen2 = Math.ceil(Math.random() * students[0].length-1);
+    let chosen2 = Math.ceil(Math.random() * students[0].length-1);
     
+    let chosen3 = Math.ceil(Math.random() * students[0].length-1);
 
-    const chosen3 = Math.ceil(Math.random() * students[0].length-1);
+    if (students[0][chosen1].house !== students[0][chosen2].house && 
+      students[0][chosen2].house !== students[0][chosen3].house && 
+      students[0][chosen1].house !== students[0][chosen3].house) { 
+        
+        this.setState(
+        {chosenStudents : [students[0][chosen1],students[0][chosen2],students[0][chosen3]],
+        chosenHouses : [students[0][chosen1].house,students[0][chosen2].house,students[0][chosen3].house]})} 
 
- 
-    this.setState({chosenStudents : [students[0][chosen1],students[0][chosen2],students[0][chosen3]]})
-
-    console.log(this.state.chosenStudents)
-    
+    else {this.chooseStudents()}
+        
   }
 
-  
+ 
 
   render(){
 
